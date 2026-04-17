@@ -700,7 +700,18 @@
         }
 
         function sendViaGmail() {
-            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=srimoorthypackersandmovers@gmail.com&su=${_mailSubject}&body=${_mailBody}`, '_blank');
+            let isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            let isAndroid = /Android/.test(navigator.userAgent);
+            let webMailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=srimoorthypackersandmovers@gmail.com&su=${_mailSubject}&body=${_mailBody}`;
+
+            if (isIOS) {
+                window.location.href = `googlegmail:///co?to=srimoorthypackersandmovers@gmail.com&subject=${_mailSubject}&body=${_mailBody}`;
+            } else if (isAndroid) {
+                window.location.href = `intent:srimoorthypackersandmovers@gmail.com?subject=${_mailSubject}&body=${_mailBody}#Intent;scheme=mailto;package=com.google.android.gm;end;`;
+            } else {
+                window.open(webMailUrl, '_blank');
+            }
+
             closeMailChooser();
         }
 
