@@ -782,3 +782,322 @@
         padding: 60px 16px;
     }
 }
+
+/* ==========================================================================
+   MULTI-STEP WIZARD BOOKING STYLES (pages.css)
+   ========================================================================== */
+
+.multistep-card {
+    padding: 30px !important;
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--gray-200);
+}
+
+/* Step Progress Indicator */
+.step-progress {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.step-bar-track {
+    position: absolute;
+    top: 18px;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    background: var(--gray-200);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.step-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--orange), #ff7b42);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-dots {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.step-dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+.dot-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--white);
+    border: 3px solid var(--gray-200);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-400);
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dot-icon svg {
+    color: inherit;
+}
+
+.dot-label {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Dot Statuses */
+.step-dot.active .dot-icon {
+    border-color: var(--orange);
+    color: var(--orange);
+    background: var(--orange-light);
+    transform: scale(1.1);
+    box-shadow: 0 0 0 6px rgba(239, 82, 38, 0.15);
+}
+
+.step-dot.active .dot-label {
+    color: var(--orange);
+}
+
+.step-dot.completed .dot-icon {
+    border-color: var(--orange);
+    background: var(--orange);
+    color: var(--white);
+}
+
+.step-dot.completed .dot-label {
+    color: var(--navy);
+}
+
+/* Form Steps */
+.form-step {
+    display: none;
+    opacity: 0;
+}
+
+.form-step.active {
+    display: block;
+    opacity: 1;
+}
+
+.step-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 16px;
+}
+
+.step-number-badge {
+    width: 32px;
+    height: 32px;
+    background: var(--orange);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    box-shadow: 0 4px 10px rgba(239, 82, 38, 0.25);
+}
+
+.step-heading h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.step-sub {
+    font-size: 13px;
+    color: var(--gray-500);
+    margin-top: 2px;
+}
+
+.req {
+    color: var(--orange);
+}
+
+/* Navigation Buttons */
+.step-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-100);
+}
+
+.step-actions-two {
+    justify-content: space-between;
+}
+
+.btn-step-next,
+.btn-step-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-step-next {
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-step-next:hover {
+    background: var(--navy-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-step-back {
+    background: var(--gray-100);
+    color: var(--navy);
+    border: 1px solid var(--gray-200);
+}
+
+.btn-step-back:hover {
+    background: var(--gray-200);
+    transform: translateY(-2px);
+}
+
+/* Review Summary Cards */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.review-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: var(--off-white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+}
+
+.review-icon {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.review-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-label {
+    font-size: 11px;
+    color: var(--gray-500);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.review-value {
+    font-size: 14px;
+    color: var(--navy);
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+/* Validation Errors */
+.field-error {
+    display: block;
+    font-size: 12px;
+    color: #e63946;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+.input-error {
+    border-color: #e63946 !important;
+    background-color: rgba(230, 57, 70, 0.02) !important;
+}
+
+/* Custom Animation classes for step navigation transition */
+.exit-left {
+    animation: fadeExitLeft 0.2s forwards ease;
+}
+.exit-right {
+    animation: fadeExitRight 0.2s forwards ease;
+}
+.enter-left {
+    animation: fadeEnterLeft 0.35s forwards ease;
+}
+.enter-right {
+    animation: fadeEnterRight 0.35s forwards ease;
+}
+
+@keyframes fadeExitLeft {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(-20px); }
+}
+@keyframes fadeExitRight {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(20px); }
+}
+@keyframes fadeEnterLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeEnterRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@media screen and (max-width: 600px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+    .step-dots {
+        gap: 8px;
+    }
+    .step-dot {
+        width: 60px;
+    }
+    .dot-label {
+        font-size: 10px;
+    }
+}
+

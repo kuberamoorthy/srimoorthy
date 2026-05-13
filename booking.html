@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book online with Sri Moorthy Transport. Request a free quote through our interactive multi-step wizard for safe transport services.">
+    <title>Book Online | Sri Moorthy Transport - Kumbakonam</title>
+    <link rel="icon" href="https://mr-vishal-dev.github.io/kuberatravels/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div class="top-bar-left">
+                <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    85/A Seenivasa Nagar, Sakkotai, Kumbakonam - 612401
+                </span>
+                <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    srimoorthypackersandmovers@gmail.com
+                </span>
+            </div>
+            <div class="top-bar-right">
+                <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Mon - Sun: 6:00 AM - 11:00 PM
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="https://mr-vishal-dev.github.io/kuberatravels/logo.png" alt="Sri Moorthy Transport Logo" class="nav-logo">
+                </a>
+                <div class="brand-text">
+                    <h1 class="brand-name"><a href="index.html" style="color:inherit;text-decoration:none;">Sri<span>Moorthy</span></a></h1>
+                    <p class="brand-tagline">PACKERS & MOVERS</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="booking.html" class="active">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="booking.html" class="nav-cta">
+                Free Quote
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <button class="menubar" id="menuToggle" onclick="menuopen()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <aside id="mobileMenu">
+        <div class="mobile-overlay" onclick="menuclose()"></div>
+        <ol id="menubarol">
+            <li class="mobile-brand">
+                <img src="https://mr-vishal-dev.github.io/kuberatravels/logo.png" alt="" width="40" height="40" style="border-radius:50%;">
+                <span>Sri Moorthy</span>
+            </li>
+            <li><a href="index.html" onclick="menuclose()">Home</a></li>
+            <li><a href="service.html" onclick="menuclose()">Services</a></li>
+            <li><a href="about.html" onclick="menuclose()">About Us</a></li>
+            <li><a href="booking.html" onclick="menuclose()">Booking</a></li>
+            <li><a href="contact.html" onclick="menuclose()">Contact Us</a></li>
+        </ol>
+    </aside>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-overlay"></div>
+        <div class="page-banner-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                <span>Book Online</span>
+            </div>
+            <h1>Book Your Move</h1>
+            <p>Our simple 3-step form helps us evaluate your transport requirements and get back with a quote.</p>
+        </div>
+    </section>
+
+    <!-- Booking Content -->
+    <main id="main" style="background: var(--off-white); padding: 80px 24px 100px;">
+        <div class="booking-wrapper" style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 40px;">
+            
+            <!-- Multi-Step Booking Form Card -->
+            <div class="booking-form-card multistep-card revealed" style="opacity: 1; transform: none; width: 100%; max-width: 800px; margin: 0 auto;">
+
+                <!-- Step Progress Bar -->
+                <div class="step-progress">
+                    <div class="step-bar-track">
+                        <div class="step-bar-fill" id="stepBarFill" style="width: 0%;"></div>
+                    </div>
+                    <div class="step-dots">
+                        <div class="step-dot active" id="dot1">
+                            <span class="dot-icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            </span>
+                            <span class="dot-label">Your Info</span>
+                        </div>
+                        <div class="step-dot" id="dot2">
+                            <span class="dot-icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            </span>
+                            <span class="dot-label">Shipment</span>
+                        </div>
+                        <div class="step-dot" id="dot3">
+                            <span class="dot-icon">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </span>
+                            <span class="dot-label">Confirm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="bookingForm" novalidate onsubmit="return false;">
+
+                    <!-- STEP 1: Personal Info -->
+                    <div class="form-step active" id="step1">
+                        <div class="step-heading">
+                            <div class="step-number-badge">1</div>
+                            <div>
+                                <h3>Personal Information</h3>
+                                <p class="step-sub">Provide your details so we can get in touch with you.</p>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cus-name">Full Name <span class="req">*</span></label>
+                                <input type="text" id="cus-name" placeholder="Enter your name" autocomplete="name">
+                                <span class="field-error" id="err-name"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="con-number">Phone Number <span class="req">*</span></label>
+                                <input type="tel" id="con-number" placeholder="Enter phone number" autocomplete="tel">
+                                <span class="field-error" id="err-phone"></span>
+                            </div>
+                        </div>
+                        <div class="form-group full">
+                            <label for="cus-email">Email Address <span class="req">*</span></label>
+                            <input type="email" id="cus-email" placeholder="Enter your email address" autocomplete="email">
+                            <span class="field-error" id="err-email"></span>
+                        </div>
+                        <div class="step-actions">
+                            <button type="button" class="btn-step-next" onclick="goToStep(2)">
+                                Next: Shipment Details
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Shipment Details -->
+                    <div class="form-step" id="step2">
+                        <div class="step-heading">
+                            <div class="step-number-badge">2</div>
+                            <div>
+                                <h3>Shipment Details</h3>
+                                <p class="step-sub">Where are we picking up and dropping off?</p>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="from-add">Pickup Location <span class="req">*</span></label>
+                                <input type="text" id="from-add" placeholder="From where?">
+                                <span class="field-error" id="err-from"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="to-add">Drop Location <span class="req">*</span></label>
+                                <input type="text" id="to-add" placeholder="To where?">
+                                <span class="field-error" id="err-to"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date <span class="req">*</span></label>
+                                <input type="date" id="date">
+                                <span class="field-error" id="err-date"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="timing">Preferred Time <span class="req">*</span></label>
+                                <input type="time" id="timing">
+                                <span class="field-error" id="err-time"></span>
+                            </div>
+                        </div>
+                        <div class="step-actions step-actions-two">
+                            <button type="button" class="btn-step-back" onclick="goToStep(1)">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                                Back
+                            </button>
+                            <button type="button" class="btn-step-next" onclick="goToStep(3)">
+                                Next: Review &amp; Confirm
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Review & Confirm -->
+                    <div class="form-step" id="step3">
+                        <div class="step-heading">
+                            <div class="step-number-badge">3</div>
+                            <div>
+                                <h3>Review &amp; Confirm</h3>
+                                <p class="step-sub">Add any notes and review your booking before sending.</p>
+                            </div>
+                        </div>
+
+                        <!-- Summary Cards -->
+                        <div class="review-grid" id="reviewGrid"></div>
+
+                        <div class="form-group full">
+                            <label for="description">Additional Notes <span style="color:#aaa;font-weight:400;">(optional)</span></label>
+                            <textarea id="description" rows="3" placeholder="Describe your requirements, goods type, special instructions..."></textarea>
+                        </div>
+
+                        <div class="step-actions step-actions-two">
+                            <button type="button" class="btn-step-back" onclick="goToStep(2)">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                                Back
+                            </button>
+                            <button type="button" class="btn-primary form-submit" onclick="sendWhatsApp()">
+                                Send Booking Request via WhatsApp
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- WhatsApp Float -->
+    <div class="floating-logo shake" onclick="openchat()" id="whatsapp">
+        <img src="https://mr-vishal-dev.github.io/kuberatravels/icons8-whatsapp-48.png" alt="WhatsApp" height="40" width="40">
+        <a href="https://wa.me/8248688471" id="message-content"></a>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <div class="footer-col footer-about">
+                <div class="footer-brand">
+                    <img src="https://mr-vishal-dev.github.io/kuberatravels/logo.png" alt="" width="50" height="50" style="border-radius:50%;">
+                    <div>
+                        <h2>Sri Moorthy</h2>
+                        <span>PACKERS & MOVERS</span>
+                    </div>
+                </div>
+                <p>More than 15 years of experience as your reliable transport partner. We ensure safe and timely delivery of all goods.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://wa.me/8248688471" aria-label="WhatsApp">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Transport Office</h3>
+                <div class="footer-contact-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <p>85/A Seenivasa Nagar, Sakkotai(PO), Kumbakonam - 612401</p>
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <p>8940481999<br>9789401999</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Working Hours</h3>
+                <p>We work 7 days a week, every day including major holidays.</p>
+                <div class="hours-list">
+                    <div class="hours-item">
+                        <span>Monday - Saturday</span>
+                        <span class="hours-time">6:00 - 23:00</span>
+                    </div>
+                    <div class="hours-item">
+                        <span>Sunday & Holidays</span>
+                        <span class="hours-time">6:00 - 23:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sri Moorthy Transport. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script>
+        // Navbar scroll & back to top
+        window.addEventListener('scroll', function() {
+            let navbar = document.getElementById('navbar');
+            let backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 80) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+            if (window.scrollY > 500) backToTop.classList.add('show');
+            else backToTop.classList.remove('show');
+        });
+
+        // Mobile menu
+        let aside = document.getElementById('mobileMenu');
+        function menuopen() { aside.classList.add('open'); document.body.style.overflow = "hidden"; }
+        function menuclose() { aside.classList.remove('open'); document.body.style.overflow = ""; }
+
+        // WhatsApp support
+        let whatsapp = document.getElementById('whatsapp');
+        let message = document.getElementById('message-content');
+        function openchat() {
+            if (whatsapp.style.width === "140px") {
+                whatsapp.style.cssText = "width:50px;outline:none";
+                message.innerText = '';
+                setTimeout(() => { whatsapp.classList.add('shake'); }, 1000);
+            } else {
+                whatsapp.style.cssText = "width:140px;outline:2px solid rgb(24, 177, 58);border-radius:30px;";
+                message.innerText = "Chat with us";
+                whatsapp.classList.remove('shake');
+            }
+        }
+
+        // Date min value
+        let dateval = document.getElementById('date');
+        let todayDate = new Date().toISOString().split('T')[0];
+        dateval.setAttribute('min', todayDate);
+
+        // Multi-Step Wizard
+        let currentStep = 1;
+        const totalSteps = 3;
+
+        function setBarFill(step) {
+            const pct = ((step - 1) / (totalSteps - 1)) * 100;
+            document.getElementById('stepBarFill').style.width = pct + '%';
+        }
+
+        function updateDots(step) {
+            for (let i = 1; i <= totalSteps; i++) {
+                const dot = document.getElementById('dot' + i);
+                dot.classList.remove('active', 'completed');
+                if (i < step) dot.classList.add('completed');
+                else if (i === step) dot.classList.add('active');
+            }
+        }
+
+        function setError(id, msg) {
+            const el = document.getElementById(id);
+            if (el) el.textContent = msg;
+        }
+
+        function clearErrors() {
+            document.querySelectorAll('.field-error').forEach(e => e.textContent = '');
+            document.querySelectorAll('.form-group input, .form-group textarea').forEach(e => e.classList.remove('input-error'));
+        }
+
+        function validateStep(step) {
+            clearErrors();
+            let valid = true;
+            if (step === 1) {
+                const name = document.getElementById('cus-name').value.trim();
+                const phone = document.getElementById('con-number').value.trim();
+                const email = document.getElementById('cus-email').value.trim();
+                if (!name) { setError('err-name', 'Full name is required.'); document.getElementById('cus-name').classList.add('input-error'); valid = false; }
+                if (!phone || !/^[0-9+\-\s]{7,15}$/.test(phone)) { setError('err-phone', 'Enter a valid phone number.'); document.getElementById('con-number').classList.add('input-error'); valid = false; }
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError('err-email', 'Enter a valid email address.'); document.getElementById('cus-email').classList.add('input-error'); valid = false; }
+            }
+            if (step === 2) {
+                const from = document.getElementById('from-add').value.trim();
+                const to = document.getElementById('to-add').value.trim();
+                const dt = document.getElementById('date').value;
+                const tm = document.getElementById('timing').value;
+                if (!from) { setError('err-from', 'Pickup location is required.'); document.getElementById('from-add').classList.add('input-error'); valid = false; }
+                if (!to) { setError('err-to', 'Drop location is required.'); document.getElementById('to-add').classList.add('input-error'); valid = false; }
+                if (!dt) { setError('err-date', 'Please select a date.'); document.getElementById('date').classList.add('input-error'); valid = false; }
+                if (!tm) { setError('err-time', 'Please select a time.'); document.getElementById('timing').classList.add('input-error'); valid = false; }
+            }
+            return valid;
+        }
+
+        function buildReview() {
+            const fields = [
+                { icon: '👤', label: 'Name', val: document.getElementById('cus-name').value },
+                { icon: '📞', label: 'Phone', val: document.getElementById('con-number').value },
+                { icon: '✉️', label: 'Email', val: document.getElementById('cus-email').value },
+                { icon: '📍', label: 'Pickup', val: document.getElementById('from-add').value },
+                { icon: '🏁', label: 'Drop', val: document.getElementById('to-add').value },
+                { icon: '📅', label: 'Date', val: document.getElementById('date').value },
+                { icon: '🕐', label: 'Time', val: document.getElementById('timing').value },
+            ];
+            const grid = document.getElementById('reviewGrid');
+            grid.innerHTML = fields.map(f => `
+                <div class="review-card">
+                    <span class="review-icon">${f.icon}</span>
+                    <div class="review-details">
+                        <span class="review-label">${f.label}</span>
+                        <span class="review-value">${f.val || '—'}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function goToStep(target) {
+            if (target > currentStep && !validateStep(currentStep)) return;
+            if (target === 3) buildReview();
+            const fromEl = document.getElementById('step' + currentStep);
+            const toEl = document.getElementById('step' + target);
+            const goingForward = target > currentStep;
+            fromEl.classList.add(goingForward ? 'exit-left' : 'exit-right');
+            setTimeout(() => {
+                fromEl.classList.remove('active', 'exit-left', 'exit-right');
+                toEl.classList.add(goingForward ? 'enter-right' : 'enter-left', 'active');
+                setTimeout(() => toEl.classList.remove('enter-right', 'enter-left'), 350);
+            }, 200);
+            currentStep = target;
+            setBarFill(target);
+            updateDots(target);
+        }
+
+        // Initialise
+        setBarFill(1);
+        updateDots(1);
+
+        function sendWhatsApp() {
+            let cus_name = document.getElementById('cus-name').value;
+            let cus_email = document.getElementById('cus-email').value;
+            let con_number = document.getElementById('con-number').value;
+            let from_add = document.getElementById('from-add').value;
+            let to_add = document.getElementById('to-add').value;
+            let date = document.getElementById('date').value;
+            let time = document.getElementById('timing').value;
+            let description = document.getElementById('description').value || 'N/A';
+
+            let waMessage = `🚚 *SRI MOORTHY TRANSPORT - BOOKING REQUEST* 🚚\n\n` +
+                            `👤 *Customer Details:*\n` +
+                            `• *Name:* ${cus_name}\n` +
+                            `• *Phone:* ${con_number}\n` +
+                            `• *Email:* ${cus_email}\n\n` +
+                            `📍 *Shipment Details:*\n` +
+                            `• *Pickup:* ${from_add}\n` +
+                            `• *Drop:* ${to_add}\n` +
+                            `• *Date:* ${date}\n` +
+                            `• *Time:* ${time}\n\n` +
+                            `📝 *Additional Notes:*\n${description}`;
+
+            let waUrl = `https://wa.me/918940481999?text=${encodeURIComponent(waMessage)}`;
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+
+</html>
