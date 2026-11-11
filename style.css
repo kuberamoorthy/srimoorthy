@@ -377,11 +377,12 @@ aside#mobileMenu ol li a:hover {
 header#hero {
     position: relative;
     min-height: 100dvh;
-    background-image: url(https://mr-vishal-dev.github.io/kuberatravels/dost.jpeg);
+    background-image: url('dost.jpeg'), url(https://mr-vishal-dev.github.io/kuberatravels/dost.jpeg);
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .hero-overlay {
@@ -391,13 +392,22 @@ header#hero {
     z-index: 1;
 }
 
-.hero-content {
+.hero-container {
     position: relative;
     z-index: 2;
     max-width: 1280px;
-    margin: 0 auto;
-    padding: 120px 24px 80px;
     width: 100%;
+    margin: 0 auto;
+    padding: 130px 24px 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 700px;
 }
 
 .hero-badge {
@@ -413,7 +423,6 @@ header#hero {
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 24px;
-    animation: fadeInDown 0.8s ease-out;
 }
 
 .hero-title {
@@ -424,7 +433,6 @@ header#hero {
     line-height: 1.1;
     margin-bottom: 20px;
     letter-spacing: -1px;
-    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .hero-title .highlight {
@@ -436,11 +444,10 @@ header#hero {
 
 .hero-description {
     font-size: clamp(15px, 1.5vw, 18px);
-    color: rgba(255,255,255,0.75);
-    max-width: 550px;
-    min-height: 30px;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 580px;
     margin-bottom: 36px;
-    animation: fadeInUp 0.8s ease-out 0.4s both;
+    line-height: 1.7;
 }
 
 .hero-actions {
@@ -448,7 +455,6 @@ header#hero {
     align-items: center;
     gap: 24px;
     flex-wrap: wrap;
-    animation: fadeInUp 0.8s ease-out 0.6s both;
 }
 
 .btn-primary {
@@ -469,24 +475,9 @@ header#hero {
     overflow: hidden;
 }
 
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.6s ease;
-}
-
-.btn-primary:hover::before {
-    left: 100%;
-}
-
 .btn-primary:hover {
     background: var(--orange-hover);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 14px 40px rgba(239, 82, 38, 0.5);
 }
 
@@ -497,7 +488,8 @@ header#hero {
     padding: 8px 24px 8px 8px;
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.15);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.18);
     border-radius: var(--radius-pill);
     color: var(--white);
     transition: var(--transition);
@@ -518,7 +510,6 @@ header#hero {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    animation: pulse-ring 2s infinite;
 }
 
 .btn-secondary small {
@@ -534,38 +525,67 @@ header#hero {
     letter-spacing: 0.5px;
 }
 
-/* Rotating badge */
+/* Badge Circle with Continuous Smooth Rotation */
 .hero-badge-circle {
-    position: absolute;
-    right: 12%;
-    bottom: 20%;
-    z-index: 2;
-    width: 140px;
-    height: 140px;
+    position: relative;
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 70%, transparent 100%);
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    user-select: none;
+}
+
+.hero-badge-circle:hover {
+    transform: scale(1.06);
 }
 
 .rotating-text {
     position: absolute;
-    animation: rotate 12s linear infinite;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateSeal 14s linear infinite;
+    transform-origin: center center;
+    will-change: transform;
+    pointer-events: none;
+}
+
+.rotating-text svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@keyframes rotateSeal {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .badge-icon {
-    width: 60px;
-    height: 60px;
+    position: relative;
+    z-index: 2;
+    width: 58px;
+    height: 58px;
     background: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-md);
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(239, 82, 38, 0.15);
 }
 
 /* Scroll Down */
@@ -580,34 +600,11 @@ header#hero {
     border-radius: 30px;
     padding: 10px 14px;
     cursor: pointer;
-    animation: bounceDown 2s infinite;
     transition: opacity 0.4s ease;
 }
 
 #swipe:hover {
     border-color: var(--orange);
-}
-
-@keyframes bounceDown {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(12px); }
-}
-
-/* Sparkle stars */
-.star {
-    height: 4px;
-    width: 4px;
-    background-color: rgba(255,255,255,0.8);
-    clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
-    position: absolute;
-    z-index: 3;
-    animation: twinkle 0.8s ease-out;
-    pointer-events: none;
-}
-
-@keyframes twinkle {
-    0% { transform: scale(0); opacity: 1; }
-    100% { transform: scale(2); opacity: 0; }
 }
 
 /* ---------- Services Section ---------- */
@@ -664,13 +661,8 @@ header#hero {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.service-card.revealed {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 .service-card::before {
@@ -712,6 +704,13 @@ header#hero {
 .service-card:hover .service-icon {
     background: var(--orange);
     color: var(--white);
+    transform: scale(1.08) rotate(4deg);
+}
+
+.service-card:hover .service-link {
+    gap: 8px;
+    color: var(--orange-hover);
+    transform: translateX(4px);
 }
 
 .service-card h3 {
@@ -801,18 +800,15 @@ header#hero {
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.08);
     transition: var(--transition);
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.stat-card.revealed {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 .stat-card:hover {
     background: rgba(255,255,255,0.08);
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    border-color: rgba(239, 82, 38, 0.4);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3), 0 0 20px rgba(239, 82, 38, 0.15);
 }
 
 .stat-icon {
@@ -825,6 +821,12 @@ header#hero {
     align-items: center;
     justify-content: center;
     color: var(--orange);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(239, 82, 38, 0.22);
 }
 
 .stat-number {
@@ -842,30 +844,166 @@ header#hero {
     margin-top: 4px;
 }
 
-/* ---------- Booking / Main Section ---------- */
+/* ---------- Owner / Leadership Profile Section ---------- */
+.owner-section {
+    padding: 90px 24px;
+    background: var(--white);
+    position: relative;
+}
+
+.owner-container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.owner-card {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 48px;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f9fbfd 100%);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: 0 14px 44px rgba(0, 16, 38, 0.08);
+}
+
+.owner-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+    background: var(--navy);
+}
+
+.owner-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.owner-card:hover .owner-img {
+    transform: scale(1.03);
+}
+
+.owner-badge-pill {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    background: rgba(0, 16, 38, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: var(--radius-pill);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid rgba(239, 82, 38, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.owner-badge-pill svg {
+    color: #ffb703;
+}
+
+.owner-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.owner-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(30px, 4vw, 40px);
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1.15;
+    margin: 8px 0 6px;
+    letter-spacing: -0.5px;
+}
+
+.owner-role {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 18px;
+}
+
+.owner-bio {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-body);
+    margin-bottom: 24px;
+}
+
+.owner-contact-chips {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.owner-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: var(--radius-pill);
+    background: var(--navy);
+    color: var(--white);
+    font-size: 13.5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.owner-chip:hover {
+    background: var(--orange);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-orange);
+    color: var(--white);
+}
+
+.owner-chip.whatsapp-chip {
+    background: #25D366;
+    color: var(--white);
+}
+
+.owner-chip.whatsapp-chip:hover {
+    background: #1ebc59;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    color: var(--white);
+}
+
+/* ---------- Booking / CTA Section ---------- */
+.cta-section,
 main#main {
     background: var(--off-white);
     padding: 100px 24px;
+    position: relative;
 }
 
 .booking-wrapper {
     max-width: 1280px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 60px;
-    align-items: start;
+    align-items: center;
 }
 
 .booking-info {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.6s ease;
-}
-
-.booking-info.revealed {
     opacity: 1;
-    transform: translateX(0);
+    transform: none;
 }
 
 .booking-info h2 {
@@ -885,9 +1023,9 @@ main#main {
 }
 
 .booking-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .feature-item {
@@ -899,6 +1037,76 @@ main#main {
     color: var(--navy);
 }
 
+/* Contact Form Card on Home Page */
+.contact-form-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--gray-200);
+    text-align: center;
+    opacity: 1;
+    transform: none;
+}
+
+.quote-card-icon {
+    width: 68px;
+    height: 68px;
+    background: var(--orange-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    margin: 0 auto 20px;
+}
+
+.contact-form-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.contact-form-card p {
+    font-size: 14px;
+    color: var(--text-body);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.quote-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.quote-btn {
+    justify-content: center;
+    width: 100%;
+}
+
+.quote-call-btn {
+    justify-content: center;
+    width: 100%;
+    border: 1px solid var(--gray-300);
+    color: var(--navy);
+    background: rgba(0,0,0,0.02);
+}
+
+.quote-call-btn:hover {
+    background: rgba(0,0,0,0.06);
+    color: var(--navy);
+}
+
+.quote-call-btn .phone-icon-wrap {
+    width: 26px;
+    height: 26px;
+    background: var(--orange);
+    margin-right: 6px;
+}
+
 /* Booking Form Card */
 .booking-form-card {
     background: var(--white);
@@ -908,14 +1116,8 @@ main#main {
     border: 1px solid var(--gray-200);
     position: relative;
     overflow: hidden;
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.6s ease 0.2s;
-}
-
-.booking-form-card.revealed {
     opacity: 1;
-    transform: translateX(0);
+    transform: none;
 }
 
 .booking-form-card::before {
@@ -998,49 +1200,113 @@ main#main {
     margin-top: 8px;
 }
 
-/* ---------- WhatsApp Float ---------- */
-.floating-logo {
+/* ---------- Floating Quick Contact Dock (Call + WhatsApp) ---------- */
+.floating-contact-dock {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    z-index: 999;
-    background-color: var(--white);
-    width: 56px;
-    height: 56px;
+    z-index: 1200;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.float-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 50px;
+    border-radius: var(--radius-pill);
+    color: var(--white);
+    padding: 0 18px 0 0;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    user-select: none;
+    position: relative;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+}
+
+.float-action-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    color: var(--white);
+}
+
+.float-action-icon {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
-    cursor: pointer;
-    transition: width 0.4s ease, border-radius 0.4s ease, height 0.4s ease;
-    overflow: hidden;
-    gap: 8px;
-    padding: 0;
-}
-
-.floating-logo img {
-    width: 32px;
-    height: 32px;
     flex-shrink: 0;
+    color: var(--white);
 }
 
-.floating-logo a {
-    color: #25D366;
-    font-size: 13px;
+.float-action-label {
+    font-size: 13.5px;
     font-weight: 700;
+    letter-spacing: 0.3px;
     white-space: nowrap;
+    color: var(--white);
 }
 
-.shake {
-    animation: shaking 1.5s ease-in-out infinite;
+/* Call Phone Button Style */
+.float-btn-call {
+    background: linear-gradient(135deg, #EF5226 0%, #ff6b3d 100%);
+    box-shadow: 0 8px 24px rgba(239, 82, 38, 0.45);
 }
 
-@keyframes shaking {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(15deg); }
-    50% { transform: rotate(-10deg); }
-    75% { transform: rotate(5deg); }
+.float-btn-call:hover {
+    box-shadow: 0 12px 30px rgba(239, 82, 38, 0.65);
+}
+
+.float-btn-call .float-action-icon {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+/* WhatsApp Button Style */
+.float-btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+.float-btn-whatsapp:hover {
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.65);
+}
+
+.float-btn-whatsapp .float-action-icon {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Gentle pulse ring effect on WhatsApp */
+.float-btn-whatsapp::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    animation: floatAura 2.8s infinite;
+    pointer-events: none;
+}
+
+@keyframes floatAura {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Legacy fallback support */
+.floating-logo {
+    display: none;
 }
 
 /* ---------- Footer ---------- */
@@ -1201,20 +1467,20 @@ footer#footer {
 /* ---------- Back to Top ---------- */
 #backToTop {
     position: fixed;
-    bottom: 92px;
+    bottom: 156px;
     right: 28px;
     z-index: 998;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: var(--orange);
+    background: var(--navy);
     color: var(--white);
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-orange);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     transition: var(--transition);
     opacity: 0;
     visibility: hidden;
@@ -1228,7 +1494,8 @@ footer#footer {
 }
 
 #backToTop:hover {
-    background: var(--orange-hover);
+    background: var(--orange);
+    border-color: var(--orange);
     transform: translateY(-4px);
 }
 
@@ -1254,25 +1521,31 @@ footer#footer {
     backdrop-filter: blur(20px);
 }
 
-/* ---------- Animations ---------- */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse-ring {
-    0% { box-shadow: 0 0 0 0 rgba(239, 82, 38, 0.4); }
-    70% { box-shadow: 0 0 0 12px rgba(239, 82, 38, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(239, 82, 38, 0); }
-}
+/* ---------- Animations (Removed for clean static presentation) ---------- */
 
 /* ---------- Responsive: Tablet ---------- */
 @media screen and (max-width: 1024px) {
+    .hero-container {
+        padding: 110px 24px 70px;
+        gap: 32px;
+    }
+
+    .hero-badge-circle {
+        display: flex;
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero-badge-circle .rotating-text svg {
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero-badge-circle .badge-icon {
+        width: 52px;
+        height: 52px;
+    }
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1289,10 +1562,6 @@ footer#footer {
     .booking-wrapper {
         grid-template-columns: 1fr;
         gap: 40px;
-    }
-
-    .hero-badge-circle {
-        display: none;
     }
 }
 
@@ -1318,12 +1587,83 @@ footer#footer {
         height: 65px;
     }
 
-    .hero-title {
-        font-size: clamp(30px, 7vw, 48px);
+    header#hero {
+        min-height: auto;
+        padding-top: 10px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 95px 20px 55px;
+        gap: 28px;
     }
 
     .hero-content {
-        padding: 100px 20px 60px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-badge {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+    }
+
+    .hero-title {
+        font-size: clamp(28px, 7vw, 42px);
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        gap: 14px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Badge visible, smoothly animated and centered on mobile */
+    .hero-badge-circle {
+        display: flex;
+        margin: 10px auto 0;
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero-badge-circle .rotating-text svg {
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero-badge-circle .badge-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    #swipe {
+        display: none;
+    }
+
+    .services-section {
+        padding: 60px 20px;
     }
 
     .services-grid {
@@ -1331,39 +1671,113 @@ footer#footer {
         gap: 20px;
     }
 
+    .stats-section {
+        padding: 60px 20px;
+    }
+
+    .stats-section::before,
+    .stats-section::after {
+        display: none;
+    }
+
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
 
+    .section-header {
+        margin-bottom: 36px;
+    }
+
     .section-header h2 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
-    .form-row {
+    .owner-section {
+        padding: 55px 20px;
+    }
+
+    .owner-card {
         grid-template-columns: 1fr;
-    }
-
-    .booking-form-card {
+        gap: 28px;
         padding: 28px 20px;
+        text-align: center;
     }
 
-    .booking-features {
-        grid-template-columns: 1fr;
-        gap: 12px;
+    .owner-image-wrapper {
+        max-width: 280px;
+        margin: 0 auto;
     }
 
-    .footer-inner {
+    .owner-img {
+        height: 330px;
+    }
+
+    .owner-details {
+        align-items: center;
+    }
+
+    .owner-contact-chips {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .owner-chip {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-section {
+        padding: 60px 20px;
+    }
+
+    .booking-wrapper {
         grid-template-columns: 1fr;
         gap: 36px;
     }
 
-    .hero-badge-circle {
-        display: none;
+    .contact-form-card {
+        padding: 28px 20px;
     }
 
-    .btn-secondary {
-        width: 100%;
+    .footer-inner {
+        padding: 50px 20px 30px;
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .footer-bottom-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .floating-contact-dock {
+        bottom: 16px;
+        right: 16px;
+        gap: 10px;
+    }
+
+    .float-action-btn {
+        height: 44px;
+        padding: 0 14px 0 0;
+    }
+
+    .float-action-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .float-action-label {
+        font-size: 12.5px;
+    }
+
+    #backToTop {
+        bottom: 136px;
+        right: 20px;
+        width: 38px;
+        height: 38px;
     }
 }
 
@@ -1372,13 +1786,46 @@ footer#footer {
         display: none;
     }
 
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
+    .hero-container {
+        padding: 85px 16px 45px;
+        gap: 22px;
     }
 
-    .btn-primary {
-        justify-content: center;
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-badge {
+        font-size: 11px;
+        padding: 6px 14px;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
+
+    .hero-badge-circle {
+        width: 120px;
+        height: 120px;
+        margin-top: 6px;
+    }
+
+    .hero-badge-circle .rotating-text svg {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-badge-circle .badge-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hero-badge-circle .badge-icon svg {
+        width: 26px;
+        height: 26px;
     }
 
     .stat-card {
