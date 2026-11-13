@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Book online with Sri Moorthy Transport. Request a free quote through our interactive multi-step wizard for safe transport services.">
-    <title>Book Online | Sri Moorthy Transport - Kumbakonam</title>
+    <meta name="description" content="Book Local Service or Packers and Movers online with Sri Moorthy Transport, Kumbakonam. Safe vehicle hire and complete household relocation.">
+    <title>Booking | Sri Moorthy Transport Packers and Movers</title>
     <link rel="icon" href="https://mr-vishal-dev.github.io/kuberatravels/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pages.css">
 </head>
@@ -46,7 +46,7 @@
                 </a>
                 <div class="brand-text">
                     <h1 class="brand-name"><a href="index.html" style="color:inherit;text-decoration:none;">Sri<span>Moorthy</span></a></h1>
-                    <p class="brand-tagline">PACKERS & MOVERS</p>
+                    <p class="brand-tagline">PACKERS &amp; MOVERS</p>
                 </div>
             </div>
             <ul class="nav-links">
@@ -60,7 +60,7 @@
                 Free Quote
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-            <button class="menubar" id="menuToggle" onclick="menuopen()">
+            <button class="menubar" id="menuToggle" onclick="menuopen()" aria-label="Toggle Navigation Menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                 </svg>
@@ -73,7 +73,7 @@
         <div class="mobile-overlay" onclick="menuclose()"></div>
         <ol id="menubarol">
             <li class="mobile-brand">
-                <img src="https://mr-vishal-dev.github.io/kuberatravels/logo.png" alt="" width="40" height="40" style="border-radius:50%;">
+                <img src="https://mr-vishal-dev.github.io/kuberatravels/logo.png" alt="Logo" width="40" height="40" style="border-radius:50%;">
                 <span>Sri Moorthy</span>
             </li>
             <li><a href="index.html" onclick="menuclose()">Home</a></li>
@@ -91,166 +91,307 @@
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-                <span>Book Online</span>
+                <span>Booking</span>
             </div>
-            <h1>Book Your Move</h1>
-            <p>Our simple 3-step form helps us evaluate your transport requirements and get back with a quote.</p>
+            <h1>Sri Moorthy Transport Packers and Movers</h1>
+            <p>Fast, reliable local transport and complete hassle-free relocation services across Kumbakonam and Tamil Nadu.</p>
         </div>
     </section>
 
-    <!-- Booking Content -->
-    <main id="main" style="background: var(--off-white); padding: 80px 24px 100px;">
-        <div class="booking-wrapper" style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 40px;">
+    <!-- Main Booking Section -->
+    <main id="main" class="booking-page-section">
+        <div class="booking-container">
             
-            <!-- Multi-Step Booking Form Card -->
-            <div class="booking-form-card multistep-card revealed" style="opacity: 1; transform: none; width: 100%; max-width: 800px; margin: 0 auto;">
+            <div class="booking-card">
 
-                <!-- Step Progress Bar -->
-                <div class="step-progress">
-                    <div class="step-bar-track">
-                        <div class="step-bar-fill" id="stepBarFill" style="width: 0%;"></div>
+                <!-- Multi-Step Navigation Header -->
+                <div class="stepper-header">
+                    <div class="step-indicator-item active" id="stepIndicator1" onclick="jumpToStep(1)">
+                        <div class="step-indicator-circle">1</div>
+                        <span class="step-indicator-label">Service &amp; Vehicle</span>
                     </div>
-                    <div class="step-dots">
-                        <div class="step-dot active" id="dot1">
-                            <span class="dot-icon">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                            </span>
-                            <span class="dot-label">Your Info</span>
-                        </div>
-                        <div class="step-dot" id="dot2">
-                            <span class="dot-icon">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                            </span>
-                            <span class="dot-label">Shipment</span>
-                        </div>
-                        <div class="step-dot" id="dot3">
-                            <span class="dot-icon">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            </span>
-                            <span class="dot-label">Confirm</span>
-                        </div>
+                    <div class="step-indicator-item" id="stepIndicator2" onclick="jumpToStep(2)">
+                        <div class="step-indicator-circle">2</div>
+                        <span class="step-indicator-label">Route &amp; Schedule</span>
+                    </div>
+                    <div class="step-indicator-item" id="stepIndicator3" onclick="jumpToStep(3)">
+                        <div class="step-indicator-circle">3</div>
+                        <span class="step-indicator-label">Review &amp; Confirm</span>
                     </div>
                 </div>
 
                 <form id="bookingForm" novalidate onsubmit="return false;">
 
-                    <!-- STEP 1: Personal Info -->
+                    <!-- ========================================================
+                         STEP 1: Service Selection, Load Type, Vehicle & Contact
+                         ======================================================== -->
                     <div class="form-step active" id="step1">
-                        <div class="step-heading">
-                            <div class="step-number-badge">1</div>
-                            <div>
-                                <h3>Personal Information</h3>
-                                <p class="step-sub">Provide your details so we can get in touch with you.</p>
+                        
+                        <!-- 1. Choose the Booking Service -->
+                        <div class="wizard-section-heading">
+                            <h3 class="section-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF5226" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                                Choose the Booking Service
+                            </h3>
+                            <p class="section-desc">Select between Local Service hire or complete Packers and Movers relocation.</p>
+                        </div>
+
+                        <div class="service-options-grid">
+                            <!-- Option 1: Local Service -->
+                            <div class="service-choice-card selected" id="choiceLocal" onclick="selectBookingService('Local Service')">
+                                <div class="service-choice-top">
+                                    <div class="service-choice-icon">🚚</div>
+                                    <div class="service-check-pill"></div>
+                                </div>
+                                <h4 class="service-choice-title">Local Service</h4>
+                                <p class="service-choice-desc">Mini truck hire (Ashok Leyland Dost, Tata Ace) for city goods, commercial loads, factory materials &amp; quick deliveries.</p>
+                                <span class="service-choice-badge">🚚 Local Vehicle &amp; Goods Hire</span>
+                            </div>
+
+                            <!-- Option 2: Packers and Movers -->
+                            <div class="service-choice-card" id="choicePackers" onclick="selectBookingService('Packers and Movers')">
+                                <div class="service-choice-top">
+                                    <div class="service-choice-icon">📦</div>
+                                    <div class="service-check-pill"></div>
+                                </div>
+                                <h4 class="service-choice-title">Packers and Movers</h4>
+                                <p class="service-choice-desc">Complete home or office relocation with 5-layer bubble packing, trained loading team, transport &amp; doorstep unpacking.</p>
+                                <span class="service-choice-badge">🛡️ Full Packing &amp; Shifting</span>
                             </div>
                         </div>
+
+                        <!-- 2. Select the Vehicle and Enter the Details -->
+                        <div class="wizard-section-heading">
+                            <h3 class="section-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF5226" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                                Select the Vehicle and Enter the Details
+                            </h3>
+                            <p class="section-desc">Choose whether you need a dedicated vehicle or part load service, and select the vehicle you require.</p>
+                        </div>
+
+                        <!-- Load Type Option: Dedicated Full Vehicle vs Part Load Service -->
+                        <div class="load-type-box">
+                            <span class="load-type-label">Select Load Requirement:</span>
+                            <div class="load-type-options">
+                                <div class="load-type-option selected" id="loadDedicated" onclick="selectLoadType('Dedicated Full Vehicle')">
+                                    <div class="load-type-radio"></div>
+                                    <div class="load-type-text">
+                                        <span class="load-type-name">Dedicated Full Vehicle</span>
+                                        <span class="load-type-sub">Exclusive vehicle dedicated solely for your shipment</span>
+                                    </div>
+                                </div>
+                                <div class="load-type-option" id="loadPart" onclick="selectLoadType('Part Load Service')">
+                                    <div class="load-type-radio"></div>
+                                    <div class="load-type-text">
+                                        <span class="load-type-name">Part Load Service</span>
+                                        <span class="load-type-sub">Shared transport for single items, few boxes, or small luggage</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Available Vehicle Options Grid -->
+                        <div class="vehicle-grid" id="vehicleOptionsGrid">
+                            <!-- Populated dynamically via renderVehicleGrid() -->
+                        </div>
+
+                        <!-- Customer Details Form -->
+                        <div class="wizard-section-heading">
+                            <h3 class="section-title" style="font-size:18px;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF5226" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                Customer Contact Information
+                            </h3>
+                            <p class="section-desc">We will reach out to this contact number with your confirmed estimate.</p>
+                        </div>
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="cus-name">Full Name <span class="req">*</span></label>
-                                <input type="text" id="cus-name" placeholder="Enter your name" autocomplete="name">
+                                <div class="input-wrap">
+                                    <div class="input-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    </div>
+                                    <input type="text" id="cus-name" placeholder="Enter your full name" autocomplete="name">
+                                </div>
                                 <span class="field-error" id="err-name"></span>
                             </div>
+
                             <div class="form-group">
-                                <label for="con-number">Phone Number <span class="req">*</span></label>
-                                <input type="tel" id="con-number" placeholder="Enter phone number" autocomplete="tel">
+                                <label for="con-number">Mobile Number <span class="req">*</span></label>
+                                <div class="input-wrap">
+                                    <div class="input-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    </div>
+                                    <input type="tel" id="con-number" placeholder="Enter 10-digit mobile number" autocomplete="tel">
+                                </div>
                                 <span class="field-error" id="err-phone"></span>
                             </div>
                         </div>
+
                         <div class="form-group full">
                             <label for="cus-email">Email Address <span class="req">*</span></label>
-                            <input type="email" id="cus-email" placeholder="Enter your email address" autocomplete="email">
+                            <div class="input-wrap">
+                                <div class="input-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </div>
+                                <input type="email" id="cus-email" placeholder="Enter your email address" autocomplete="email">
+                            </div>
                             <span class="field-error" id="err-email"></span>
                         </div>
+
+                        <!-- Step 1 Actions -->
                         <div class="step-actions">
                             <button type="button" class="btn-step-next" onclick="goToStep(2)">
-                                Next: Shipment Details
+                                Proceed to Step 2: Route &amp; Schedule
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                             </button>
                         </div>
+
                     </div>
 
-                    <!-- STEP 2: Shipment Details -->
+                    <!-- ========================================================
+                         STEP 2: Route, Moving Date & Preferred Timing
+                         ======================================================== -->
                     <div class="form-step" id="step2">
-                        <div class="step-heading">
-                            <div class="step-number-badge">2</div>
-                            <div>
-                                <h3>Shipment Details</h3>
-                                <p class="step-sub">Where are we picking up and dropping off?</p>
+                        
+                        <div class="wizard-section-heading">
+                            <h3 class="section-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF5226" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Pickup &amp; Drop Location
+                            </h3>
+                            <p class="section-desc">Specify where we will pick up and safely deliver your goods.</p>
+                        </div>
+
+                        <div class="route-card-box">
+                            <div class="form-row" style="margin-bottom:0;">
+                                <div class="form-group">
+                                    <label for="from-add">Pickup Location <span class="req">*</span></label>
+                                    <div class="input-wrap">
+                                        <div class="input-icon" style="color:#10b981;">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                        </div>
+                                        <input type="text" id="from-add" placeholder="Street / Area, Kumbakonam">
+                                    </div>
+                                    <span class="field-error" id="err-from"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="to-add">Drop Destination <span class="req">*</span></label>
+                                    <div class="input-wrap">
+                                        <div class="input-icon" style="color:#EF5226;">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                        </div>
+                                        <input type="text" id="to-add" placeholder="Destination Town / Address">
+                                    </div>
+                                    <span class="field-error" id="err-to"></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="from-add">Pickup Location <span class="req">*</span></label>
-                                <input type="text" id="from-add" placeholder="From where?">
-                                <span class="field-error" id="err-from"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="to-add">Drop Location <span class="req">*</span></label>
-                                <input type="text" id="to-add" placeholder="To where?">
-                                <span class="field-error" id="err-to"></span>
-                            </div>
+
+                        <div class="wizard-section-heading">
+                            <h3 class="section-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF5226" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Schedule &amp; Timing
+                            </h3>
+                            <p class="section-desc">Select your preferred date and convenient time slot for moving.</p>
                         </div>
+
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="date">Preferred Date <span class="req">*</span></label>
-                                <input type="date" id="date">
+                                <label for="date">Preferred Moving Date <span class="req">*</span></label>
+                                <div class="input-wrap">
+                                    <div class="input-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                    </div>
+                                    <input type="date" id="date">
+                                </div>
                                 <span class="field-error" id="err-date"></span>
                             </div>
+
                             <div class="form-group">
                                 <label for="timing">Preferred Time <span class="req">*</span></label>
-                                <input type="time" id="timing">
+                                <div class="input-wrap">
+                                    <div class="input-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    </div>
+                                    <input type="time" id="timing">
+                                </div>
                                 <span class="field-error" id="err-time"></span>
                             </div>
                         </div>
-                        <div class="step-actions step-actions-two">
+
+                        <!-- Step 2 Actions -->
+                        <div class="step-actions space-between">
                             <button type="button" class="btn-step-back" onclick="goToStep(1)">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-                                Back
+                                Back to Step 1
                             </button>
                             <button type="button" class="btn-step-next" onclick="goToStep(3)">
-                                Next: Review &amp; Confirm
+                                Proceed to Step 3: Review &amp; Confirm
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                             </button>
                         </div>
+
                     </div>
 
-                    <!-- STEP 3: Review & Confirm -->
+                    <!-- ========================================================
+                         STEP 3: Review Details & WhatsApp Confirmation
+                         ======================================================== -->
                     <div class="form-step" id="step3">
-                        <div class="step-heading">
-                            <div class="step-number-badge">3</div>
-                            <div>
-                                <h3>Review &amp; Confirm</h3>
-                                <p class="step-sub">Add any notes and review your booking before sending.</p>
+                        
+                        <div class="wizard-section-heading">
+                            <h3 class="section-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF5226" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                Review &amp; Confirm Your Booking
+                            </h3>
+                            <p class="section-desc">Review your booking summary before submitting your request to our office.</p>
+                        </div>
+
+                        <!-- Review Grid Box -->
+                        <div class="review-box">
+                            <div class="review-box-header">
+                                <span class="review-box-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF5226" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Booking Summary Details
+                                </span>
+                                <button type="button" class="review-edit-link" onclick="goToStep(1)">Edit Details</button>
+                            </div>
+                            <div class="review-grid" id="reviewGrid">
+                                <!-- Populated dynamically by buildReview() -->
                             </div>
                         </div>
 
-                        <!-- Summary Cards -->
-                        <div class="review-grid" id="reviewGrid"></div>
-
+                        <!-- Additional Notes -->
                         <div class="form-group full">
-                            <label for="description">Additional Notes <span style="color:#aaa;font-weight:400;">(optional)</span></label>
-                            <textarea id="description" rows="3" placeholder="Describe your requirements, goods type, special instructions..."></textarea>
+                            <label for="description">Additional Notes / Special Instructions <span style="color:#64748b;font-weight:400;">(optional)</span></label>
+                            <textarea id="description" rows="3" placeholder="Mention any heavy items, floor numbers, elevator access, or specific packaging requests..."></textarea>
                         </div>
 
-                        <div class="step-actions step-actions-two">
+                        <!-- Step 3 Actions -->
+                        <div class="step-actions space-between">
                             <button type="button" class="btn-step-back" onclick="goToStep(2)">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-                                Back
+                                Back to Step 2
                             </button>
-                            <button type="button" class="btn-primary form-submit" onclick="sendWhatsApp()">
-                                Send Booking Request via WhatsApp
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            <button type="button" class="btn-whatsapp-submit" onclick="sendWhatsApp()">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                                </svg>
+                                Confirm &amp; Send via WhatsApp
                             </button>
                         </div>
+
                     </div>
 
                 </form>
+
             </div>
+
         </div>
     </main>
 
     <!-- Floating Quick Contact Dock (Call + WhatsApp) -->
     <div class="floating-contact-dock" id="floatingContactDock">
-        <!-- Call Phone Button -->
         <a href="tel:+918940481999" class="float-action-btn float-btn-call" aria-label="Call Sri Moorthy Transport" title="Call Us: 8940481999">
             <span class="float-action-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
@@ -260,7 +401,6 @@
             <span class="float-action-label">Call Us</span>
         </a>
 
-        <!-- WhatsApp Button -->
         <a href="https://wa.me/918248688471?text=Hello%20Sri%20Moorthy%20Transport,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="float-action-btn float-btn-whatsapp" aria-label="Chat with us on WhatsApp" title="WhatsApp Us">
             <span class="float-action-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -271,20 +411,18 @@
         </a>
     </div>
 
-
-
     <!-- Footer -->
     <footer id="footer">
         <div class="footer-inner">
             <div class="footer-col footer-about">
                 <div class="footer-brand">
-                    <img src="https://mr-vishal-dev.github.io/kuberatravels/logo.png" alt="" width="50" height="50" style="border-radius:50%;">
+                    <img src="https://mr-vishal-dev.github.io/kuberatravels/logo.png" alt="Logo" width="50" height="50" style="border-radius:50%;">
                     <div>
                         <h2>Sri Moorthy</h2>
-                        <span>PACKERS & MOVERS</span>
+                        <span>PACKERS &amp; MOVERS</span>
                     </div>
                 </div>
-                <p>More than 15 years of experience as your reliable transport partner. We ensure safe and timely delivery of all goods.</p>
+                <p>More than 15 years of experience as your reliable transport partner. We ensure safe and timely delivery of all goods across India.</p>
                 <div class="footer-social">
                     <a href="#" aria-label="Facebook">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -292,7 +430,7 @@
                     <a href="#" aria-label="Instagram">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                     </a>
-                    <a href="https://wa.me/8248688471" aria-label="WhatsApp">
+                    <a href="https://wa.me/918248688471" aria-label="WhatsApp">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
                     </a>
                 </div>
@@ -327,7 +465,7 @@
                         <span class="hours-time">6:00 - 23:00</span>
                     </div>
                     <div class="hours-item">
-                        <span>Sunday & Holidays</span>
+                        <span>Sunday &amp; Holidays</span>
                         <span class="hours-time">6:00 - 23:00</span>
                     </div>
                 </div>
@@ -339,7 +477,7 @@
     </footer>
 
     <!-- Back to Top -->
-    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
 
@@ -359,41 +497,114 @@
         function menuopen() { aside.classList.add('open'); document.body.style.overflow = "hidden"; }
         function menuclose() { aside.classList.remove('open'); document.body.style.overflow = ""; }
 
-        // WhatsApp support
-        let whatsapp = document.getElementById('whatsapp');
-        let message = document.getElementById('message-content');
-        function openchat() {
-            if (whatsapp.style.width === "140px") {
-                whatsapp.style.cssText = "width:50px;outline:none";
-                message.innerText = '';
-                setTimeout(() => { whatsapp.classList.add('shake'); }, 1000);
-            } else {
-                whatsapp.style.cssText = "width:140px;outline:2px solid rgb(24, 177, 58);border-radius:30px;";
-                message.innerText = "Chat with us";
-                whatsapp.classList.remove('shake');
-            }
-        }
-
-        // Date min value
+        // Date min constraint
         let dateval = document.getElementById('date');
         let todayDate = new Date().toISOString().split('T')[0];
         dateval.setAttribute('min', todayDate);
 
-        // Multi-Step Wizard
+        // Core Application State
         let currentStep = 1;
         const totalSteps = 3;
 
-        function setBarFill(step) {
-            const pct = ((step - 1) / (totalSteps - 1)) * 100;
-            document.getElementById('stepBarFill').style.width = pct + '%';
+        let selectedService = 'Local Service';
+        let selectedLoadType = 'Dedicated Full Vehicle';
+        let selectedVehicle = 'Ashok Leyland Dost';
+
+        // Vehicle Datasets (Showing only Vehicle Names)
+        const vehiclesData = {
+            'Local Service': [
+                { name: 'Ashok Leyland Dost', icon: '🚚' },
+                { name: 'Tata Ace', icon: '🚛' },
+                { name: 'Mahindra Bolero Pickup', icon: '🛻' },
+                { name: '14ft Commercial Truck', icon: '📦' },
+                { name: 'Part Load (Shared Space)', icon: '🧰' }
+            ],
+            'Packers and Movers': [
+                { name: 'Ashok Leyland Dost', icon: '🚚' },
+                { name: 'Tata Ace', icon: '🚛' },
+                { name: 'Mahindra Bolero Pickup', icon: '🛻' },
+                { name: '14ft Commercial Truck', icon: '📦' },
+                { name: 'Part Load (Shared Space)', icon: '🧰' }
+            ]
+        };
+
+        // 1. Service Selection (Local Service vs Packers and Movers)
+        function selectBookingService(serviceName) {
+            selectedService = serviceName;
+
+            if (serviceName === 'Local Service') {
+                document.getElementById('choiceLocal').classList.add('selected');
+                document.getElementById('choicePackers').classList.remove('selected');
+            } else {
+                document.getElementById('choicePackers').classList.add('selected');
+                document.getElementById('choiceLocal').classList.remove('selected');
+            }
+
+            // Keep current vehicle if available in the service list, otherwise choose first
+            const list = vehiclesData[serviceName];
+            const exists = list.some(v => v.name === selectedVehicle);
+            if (!exists) {
+                selectedVehicle = list[0].name;
+            }
+
+            renderVehicleGrid();
         }
 
-        function updateDots(step) {
+        // 2. Load Type Selection (Dedicated vs Part Load)
+        function selectLoadType(type) {
+            selectedLoadType = type;
+
+            if (type === 'Dedicated Full Vehicle') {
+                document.getElementById('loadDedicated').classList.add('selected');
+                document.getElementById('loadPart').classList.remove('selected');
+                if (selectedVehicle.includes('Part Load')) {
+                    selectedVehicle = vehiclesData[selectedService][0].name;
+                }
+            } else {
+                document.getElementById('loadPart').classList.add('selected');
+                document.getElementById('loadDedicated').classList.remove('selected');
+                selectedVehicle = 'Part Load (Shared Space)';
+            }
+
+            renderVehicleGrid();
+        }
+
+        // 3. Render Vehicle Grid (Displays ONLY the Vehicle Name)
+        function renderVehicleGrid() {
+            const list = vehiclesData[selectedService];
+            const grid = document.getElementById('vehicleOptionsGrid');
+
+            grid.innerHTML = list.map((v) => `
+                <div class="vehicle-card ${v.name === selectedVehicle ? 'selected' : ''}" onclick="selectVehicle('${v.name}', this)">
+                    <div class="vehicle-icon">${v.icon}</div>
+                    <div class="vehicle-info">
+                        <div class="vehicle-name">${v.name}</div>
+                    </div>
+                    <div class="vehicle-radio"></div>
+                </div>
+            `).join('');
+        }
+
+        function selectVehicle(name, el) {
+            selectedVehicle = name;
+            document.querySelectorAll('.vehicle-card').forEach(c => c.classList.remove('selected'));
+            if (el) el.classList.add('selected');
+
+            // If user clicked Part Load card, sync the load type toggle
+            if (name.includes('Part Load')) {
+                selectLoadType('Part Load Service');
+            } else if (selectedLoadType === 'Part Load Service') {
+                selectLoadType('Dedicated Full Vehicle');
+            }
+        }
+
+        // Multi-Step Navigation
+        function updateStepIndicators(step) {
             for (let i = 1; i <= totalSteps; i++) {
-                const dot = document.getElementById('dot' + i);
-                dot.classList.remove('active', 'completed');
-                if (i < step) dot.classList.add('completed');
-                else if (i === step) dot.classList.add('active');
+                const item = document.getElementById('stepIndicator' + i);
+                item.classList.remove('active', 'completed');
+                if (i < step) item.classList.add('completed');
+                else if (i === step) item.classList.add('active');
             }
         }
 
@@ -410,44 +621,82 @@
         function validateStep(step) {
             clearErrors();
             let valid = true;
+
             if (step === 1) {
                 const name = document.getElementById('cus-name').value.trim();
                 const phone = document.getElementById('con-number').value.trim();
                 const email = document.getElementById('cus-email').value.trim();
-                if (!name) { setError('err-name', 'Full name is required.'); document.getElementById('cus-name').classList.add('input-error'); valid = false; }
-                if (!phone || !/^[0-9+\-\s]{7,15}$/.test(phone)) { setError('err-phone', 'Enter a valid phone number.'); document.getElementById('con-number').classList.add('input-error'); valid = false; }
-                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError('err-email', 'Enter a valid email address.'); document.getElementById('cus-email').classList.add('input-error'); valid = false; }
+
+                if (!name) { 
+                    setError('err-name', 'Full name is required.'); 
+                    document.getElementById('cus-name').classList.add('input-error'); 
+                    valid = false; 
+                }
+                if (!phone || !/^[0-9+\-\s]{7,15}$/.test(phone)) { 
+                    setError('err-phone', 'Please enter a valid phone number.'); 
+                    document.getElementById('con-number').classList.add('input-error'); 
+                    valid = false; 
+                }
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { 
+                    setError('err-email', 'Please enter a valid email address.'); 
+                    document.getElementById('cus-email').classList.add('input-error'); 
+                    valid = false; 
+                }
             }
+
             if (step === 2) {
                 const from = document.getElementById('from-add').value.trim();
                 const to = document.getElementById('to-add').value.trim();
                 const dt = document.getElementById('date').value;
                 const tm = document.getElementById('timing').value;
-                if (!from) { setError('err-from', 'Pickup location is required.'); document.getElementById('from-add').classList.add('input-error'); valid = false; }
-                if (!to) { setError('err-to', 'Drop location is required.'); document.getElementById('to-add').classList.add('input-error'); valid = false; }
-                if (!dt) { setError('err-date', 'Please select a date.'); document.getElementById('date').classList.add('input-error'); valid = false; }
-                if (!tm) { setError('err-time', 'Please select a time.'); document.getElementById('timing').classList.add('input-error'); valid = false; }
+
+                if (!from) { 
+                    setError('err-from', 'Pickup location is required.'); 
+                    document.getElementById('from-add').classList.add('input-error'); 
+                    valid = false; 
+                }
+                if (!to) { 
+                    setError('err-to', 'Destination drop location is required.'); 
+                    document.getElementById('to-add').classList.add('input-error'); 
+                    valid = false; 
+                }
+                if (!dt) { 
+                    setError('err-date', 'Please choose your preferred moving date.'); 
+                    document.getElementById('date').classList.add('input-error'); 
+                    valid = false; 
+                }
+                if (!tm) { 
+                    setError('err-time', 'Please choose your preferred moving time.'); 
+                    document.getElementById('timing').classList.add('input-error'); 
+                    valid = false; 
+                }
             }
+
             return valid;
         }
 
         function buildReview() {
+            const catIcon = selectedService === 'Local Service' ? '🚚' : '📦';
             const fields = [
-                { icon: '👤', label: 'Name', val: document.getElementById('cus-name').value },
-                { icon: '📞', label: 'Phone', val: document.getElementById('con-number').value },
-                { icon: '✉️', label: 'Email', val: document.getElementById('cus-email').value },
-                { icon: '📍', label: 'Pickup', val: document.getElementById('from-add').value },
-                { icon: '🏁', label: 'Drop', val: document.getElementById('to-add').value },
-                { icon: '📅', label: 'Date', val: document.getElementById('date').value },
-                { icon: '🕐', label: 'Time', val: document.getElementById('timing').value },
+                { icon: catIcon, label: 'Booking Service', val: selectedService },
+                { icon: '⚖️', label: 'Load Type', val: selectedLoadType },
+                { icon: '🚛', label: 'Selected Vehicle', val: selectedVehicle },
+                { icon: '👤', label: 'Customer Name', val: document.getElementById('cus-name').value.trim() },
+                { icon: '📞', label: 'Phone Number', val: document.getElementById('con-number').value.trim() },
+                { icon: '✉️', label: 'Email Address', val: document.getElementById('cus-email').value.trim() },
+                { icon: '📍', label: 'Pickup Location', val: document.getElementById('from-add').value.trim() },
+                { icon: '🏁', label: 'Drop Destination', val: document.getElementById('to-add').value.trim() },
+                { icon: '📅', label: 'Moving Date', val: document.getElementById('date').value },
+                { icon: '🕐', label: 'Preferred Time', val: document.getElementById('timing').value }
             ];
+
             const grid = document.getElementById('reviewGrid');
             grid.innerHTML = fields.map(f => `
-                <div class="review-card">
-                    <span class="review-icon">${f.icon}</span>
-                    <div class="review-details">
-                        <span class="review-label">${f.label}</span>
-                        <span class="review-value">${f.val || '—'}</span>
+                <div class="review-item">
+                    <span class="review-item-icon">${f.icon}</span>
+                    <div class="review-item-details">
+                        <span class="review-item-label">${f.label}</span>
+                        <span class="review-item-val">${f.val || '—'}</span>
                     </div>
                 </div>
             `).join('');
@@ -456,45 +705,61 @@
         function goToStep(target) {
             if (target > currentStep && !validateStep(currentStep)) return;
             if (target === 3) buildReview();
+
             const fromEl = document.getElementById('step' + currentStep);
             const toEl = document.getElementById('step' + target);
-            const goingForward = target > currentStep;
-            fromEl.classList.add(goingForward ? 'exit-left' : 'exit-right');
-            setTimeout(() => {
-                fromEl.classList.remove('active', 'exit-left', 'exit-right');
-                toEl.classList.add(goingForward ? 'enter-right' : 'enter-left', 'active');
-                setTimeout(() => toEl.classList.remove('enter-right', 'enter-left'), 350);
-            }, 200);
+
+            fromEl.classList.remove('active');
+            toEl.classList.add('active');
+
             currentStep = target;
-            setBarFill(target);
-            updateDots(target);
+            updateStepIndicators(target);
+
+            // Smooth scroll to top of booking card
+            const card = document.querySelector('.booking-card');
+            if (card) {
+                card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
 
-        // Initialise
-        setBarFill(1);
-        updateDots(1);
+        function jumpToStep(target) {
+            if (target < currentStep) {
+                goToStep(target);
+            } else if (target > currentStep) {
+                goToStep(target);
+            }
+        }
 
+        // Initialize state on load
+        renderVehicleGrid();
+        updateStepIndicators(1);
+
+        // WhatsApp Confirmation
         function sendWhatsApp() {
-            let cus_name = document.getElementById('cus-name').value;
-            let cus_email = document.getElementById('cus-email').value;
-            let con_number = document.getElementById('con-number').value;
-            let from_add = document.getElementById('from-add').value;
-            let to_add = document.getElementById('to-add').value;
+            let cus_name = document.getElementById('cus-name').value.trim();
+            let cus_email = document.getElementById('cus-email').value.trim();
+            let con_number = document.getElementById('con-number').value.trim();
+            let from_add = document.getElementById('from-add').value.trim();
+            let to_add = document.getElementById('to-add').value.trim();
             let date = document.getElementById('date').value;
             let time = document.getElementById('timing').value;
-            let description = document.getElementById('description').value || 'N/A';
+            let description = document.getElementById('description').value.trim() || 'None provided';
 
             let waMessage = `🚚 *SRI MOORTHY TRANSPORT - BOOKING REQUEST* 🚚\n\n` +
-                            `👤 *Customer Details:*\n` +
-                            `• *Name:* ${cus_name}\n` +
-                            `• *Phone:* ${con_number}\n` +
-                            `• *Email:* ${cus_email}\n\n` +
-                            `📍 *Shipment Details:*\n` +
-                            `• *Pickup:* ${from_add}\n` +
-                            `• *Drop:* ${to_add}\n` +
-                            `• *Date:* ${date}\n` +
-                            `• *Time:* ${time}\n\n` +
-                            `📝 *Additional Notes:*\n${description}`;
+                            `🏷️ *Service:* ${selectedService}\n` +
+                            `⚖️ *Load Type:* ${selectedLoadType}\n` +
+                            `🚛 *Selected Vehicle:* ${selectedVehicle}\n\n` +
+                            `👤 *Customer Information:*\n` +
+                            `• Name: ${cus_name}\n` +
+                            `• Phone: ${con_number}\n` +
+                            `• Email: ${cus_email}\n\n` +
+                            `📍 *Route & Timing:*\n` +
+                            `• Pickup From: ${from_add}\n` +
+                            `• Drop Destination: ${to_add}\n` +
+                            `• Moving Date: ${date}\n` +
+                            `• Moving Time: ${time}\n\n` +
+                            `📝 *Special Instructions / Items:*\n${description}\n\n` +
+                            `Please share the quotation and confirm booking. Thank you!`;
 
             let waUrl = `https://wa.me/918940481999?text=${encodeURIComponent(waMessage)}`;
             window.open(waUrl, '_blank');
